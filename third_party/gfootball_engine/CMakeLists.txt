@@ -58,14 +58,14 @@ else()
   # Debian
   FIND_PACKAGE(Boost COMPONENTS python-py${PYTHON_MAJOR}${PYTHON_MINOR})
   if (Boost_PYTHON-PY${PYTHON_MAJOR}${PYTHON_MINOR}_FOUND)
-    set(BOOST_PYTHON_VERSION python-py${PYTHON_MAJOR}${PYTHON_MINOR})
+    set(BOOST_PYTHON_VERSION python38)
   else()
     message("python-py${PYTHON_MAJOR}${PYTHON_MINOR} not found. Trying other names.")
 
     # Some other distributions.
     FIND_PACKAGE(Boost COMPONENTS python${PYTHON_MAJOR}${PYTHON_MINOR})
     if (Boost_PYTHON${PYTHON_MAJOR}${PYTHON_MINOR}_FOUND)
-      set(BOOST_PYTHON_VERSION python${PYTHON_MAJOR}${PYTHON_MINOR})
+      set(BOOST_PYTHON_VERSION python38)
     else()
       message(FATAL_ERROR "Python boost not found")
     endif()
