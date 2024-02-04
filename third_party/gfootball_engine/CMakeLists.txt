@@ -52,7 +52,7 @@ list(GET VERSION_LIST 1 PYTHON_MINOR)
 # Ubuntu
 FIND_PACKAGE(Boost COMPONENTS python3-py${PYTHON_MAJOR}${PYTHON_MINOR})
 if (Boost_PYTHON3-PY${PYTHON_MAJOR}${PYTHON_MINOR}_FOUND)
-  set(BOOST_PYTHON_VERSION python3-py${PYTHON_MAJOR}${PYTHON_MINOR})
+  set(BOOST_PYTHON_VERSION python38)
 else()
   message("python3-py${PYTHON_MAJOR}${PYTHON_MINOR} not found. Trying other names.")
   # Debian
